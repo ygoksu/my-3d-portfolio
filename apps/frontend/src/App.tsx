@@ -61,9 +61,6 @@ function App() {
 
             {/* HTML Katmanı */}
             <Scroll html style={{ width: '100%', pointerEvents: 'none' }}>
-              {/* Google Fonts import - <head> içine ekleyin */}
-              {/* <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" /> */}
-
               {/* Hero */}
               <section className="h-screen flex flex-col items-start justify-center px-12 md:px-20">
                 <div className="bg-white/60 backdrop-blur-xsm rounded-3xl border border-white/30 shadow-2xl px-10 py-10 pointer-events-auto">
@@ -166,7 +163,6 @@ function App() {
                       <p className="text-slate-400 text-sm">Loading data...</p>
                     )}
 
-                    {/* Özelleştirilmiş 42 Projeleri — Link eklenecek yerler */}
                     {[
                       { title: "42_solong", description: "A small 2D game using MiniLibX.", tags: ["C", "MiniLibX", "Algorithms"], link: "https://github.com/ygoksu/42_solong" },
                       { title: "push_swap", description: "Data sorting project using two stacks with an optimized algorithm.", tags: ["C", "Sorting", "Algorithm"], link: "https://github.com/ygoksu/push_swap" },
@@ -184,7 +180,6 @@ function App() {
                             ))}
                           </div>
                         </div>
-                        {/* GITHUB LINK */}
                         <a
                           href={proj.link}
                           target="_blank"
