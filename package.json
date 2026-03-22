@@ -1,0 +1,17 @@
+{
+  "name": "modern-3d-portfolio-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "dev:frontend": "npm run dev --workspace=apps/frontend",
+    "dev:backend": "cd apps/backend && go run cmd/main.go",
+    "docker:up": "docker-compose up -d",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  }
+}
