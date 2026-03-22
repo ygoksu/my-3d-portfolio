@@ -44,7 +44,7 @@ function App() {
         <pointLight position={[-5, 5, 3]} intensity={0.3} color="#bfdbfe" />
 
         <Suspense fallback={<Html center><span className="text-lg text-slate-500 animate-pulse">Yükleniyor...</span></Html>}>
-          <ScrollControls pages={5} damping={0.2}>
+          <ScrollControls pages={3} damping={0.2}>
 
             {/* 3D Katmanı */}
             <Scroll>

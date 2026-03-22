@@ -3,7 +3,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 
 // ── Ayarlar ───────────────────────────────────────────────
-const PARTICLE_COUNT     = 750
+const PARTICLE_COUNT     = 1000
 const SPREAD_X           = 16
 const SPREAD_Y           = 9
 const WAVE_AMPLITUDE     = 0.22
