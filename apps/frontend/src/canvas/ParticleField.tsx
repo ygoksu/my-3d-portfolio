@@ -3,9 +3,9 @@ import { useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 
 // ── Ayarlar ───────────────────────────────────────────────
-const PARTICLE_COUNT     = 1000
-const SPREAD_X           = 16
-const SPREAD_Y           = 9
+const PARTICLE_COUNT     = 3500
+const SPREAD_X           = 20
+const SPREAD_Y           = 35
 const WAVE_AMPLITUDE     = 0.22
 const WAVE_SPEED         = 0.9
 const REPULSION_RADIUS   = 1.5
@@ -68,7 +68,8 @@ export function ParticleField() {
 
     for (let i = 0; i < PARTICLE_COUNT; i++) {
       const x = (Math.random() - 0.5) * SPREAD_X
-      const y = (Math.random() - 0.5) * SPREAD_Y
+      // Parçacıkları ağırlıklı olarak aşağı (negatif Y) yönde uzatıyoruz
+      const y = (Math.random() - 0.5) * SPREAD_Y - 10
       const z = (Math.random() - 0.5) * 0.05
 
       positions[i * 3]     = origins[i * 3]     = x
@@ -110,8 +111,12 @@ export function ParticleField() {
     const pos = posAttr.array as Float32Array
     const col = colAttr.array as Float32Array
 
-    const mx = mouse.current.x
-    const my = mouse.current.y
+    // Fare noktasını dünyanın (Scroll kayması dâhil) lokal koordinatlarına çevir
+    const localMouse = mouse.current.clone()
+    pointsRef.current.worldToLocal(localMouse)
+
+    const mx = localMouse.x
+    const my = localMouse.y
     const t  = clock.current
 
     for (let i = 0; i < PARTICLE_COUNT; i++) {

@@ -141,7 +141,7 @@ function App() {
                     {projects.length > 0 ? projects.map((p) => (
                       <div
                         key={p.id}
-                        className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+                        className="bg-white/60 backdrop-blur-xsm p-8 rounded-2xl border border-white/50 shadow-sm hover:shadow-md hover:border-white/80 transition-all"
                       >
                         <h3 className="text-xl font-bold text-slate-900 mb-3">{p.title}</h3>
                         <p className="text-slate-500 text-sm leading-relaxed">{p.description}</p>
@@ -165,7 +165,7 @@ function App() {
                       { title: "push_swap", description: "Data sorting project using two stacks with an optimized algorithm.", tags: ["C", "Sorting", "Algorithm"], link: "https://github.com/ygoksu/push_swap" },
                       { title: "ft_printf", description: "Recoding the famous printf function in C.", tags: ["C", "Variadic Functions"], link: "https://github.com/ygoksu/ft_printf" }
                     ].map(proj => (
-                      <div key={proj.title} className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                      <div key={proj.title} className="bg-white/60 backdrop-blur-xsm p-8 rounded-2xl border border-white/50 shadow-sm hover:shadow-md hover:border-white/80 transition-all flex flex-col justify-between">
                         <div>
                           <h3 className="text-xl font-bold text-slate-900 mb-3">{proj.title}</h3>
                           <p className="text-slate-500 text-sm leading-relaxed">{proj.description}</p>
