@@ -89,7 +89,7 @@ function App() {
                     <span className="text-slate-400">·</span>
                     <span className="text-green-600">Go</span>
                     <span className="text-slate-400">·</span>
-                    <span className="text-cyan-600">React</span>
+                    <span className="text-yellow-600">Java</span>
                     <span className="text-slate-400">·</span>
                     <span className="text-violet-600">Three.js</span>
                   </p>
@@ -121,81 +121,81 @@ function App() {
                       LinkedIn
                     </a>
                   </div>
-            </div>
-          </section>
+                </div>
+              </section>
 
 
-          {/* Özgeçmiş (Resume) */}
-          <ResumeSection />
+              {/* Özgeçmiş (Resume) */}
+              <ResumeSection />
 
-          {/* Projeler */}
-          <section className="min-h-screen flex flex-col items-center justify-start p-10 md:p-32">
-            <div className="w-full max-w-5xl pointer-events-auto">
-              <p className="text-xs font-semibold tracking-[0.3em] uppercase text-indigo-500 mb-3">
-                Work
-              </p>
-              <h2 className="text-4xl font-bold text-slate-900 mb-12">
-                Projects
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {projects.length > 0 ? projects.map((p) => (
-                  <div
-                    key={p.id}
-                    className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
-                  >
-                    <h3 className="text-xl font-bold text-slate-900 mb-3">{p.title}</h3>
-                    <p className="text-slate-500 text-sm leading-relaxed">{p.description}</p>
-                    {p.tech_stack?.length > 0 && (
-                      <div className="flex flex-wrap gap-2 mt-4">
-                        {p.tech_stack.map(t => (
-                          <span key={t} className="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-medium">
-                            {t}
-                          </span>
-                        ))}
+              {/* Projeler */}
+              <section className="min-h-screen flex flex-col items-center justify-start p-10 md:p-32">
+                <div className="w-full max-w-5xl pointer-events-auto">
+                  <p className="text-xs font-semibold tracking-[0.3em] uppercase text-indigo-500 mb-3">
+                    Work
+                  </p>
+                  <h2 className="text-4xl font-bold text-slate-900 mb-12">
+                    Projects
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {projects.length > 0 ? projects.map((p) => (
+                      <div
+                        key={p.id}
+                        className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+                      >
+                        <h3 className="text-xl font-bold text-slate-900 mb-3">{p.title}</h3>
+                        <p className="text-slate-500 text-sm leading-relaxed">{p.description}</p>
+                        {p.tech_stack?.length > 0 && (
+                          <div className="flex flex-wrap gap-2 mt-4">
+                            {p.tech_stack.map(t => (
+                              <span key={t} className="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-medium">
+                                {t}
+                              </span>
+                            ))}
+                          </div>
+                        )}
                       </div>
+                    )) : (
+                      <p className="text-slate-400 text-sm">Loading data...</p>
                     )}
-                  </div>
-                )) : (
-                  <p className="text-slate-400 text-sm">Loading data...</p>
-                )}
 
-                {/* Özelleştirilmiş 42 Projeleri — Link eklenecek yerler */}
-                {[
-                  { title: "42_solong", description: "A small 2D game using MiniLibX.", tags: ["C", "MiniLibX", "Algorithms"], link: "https://github.com/ygoksu/42_solong" },
-                  { title: "push_swap", description: "Data sorting project using two stacks with an optimized algorithm.", tags: ["C", "Sorting", "Algorithm"], link: "https://github.com/ygoksu/push_swap" },
-                  { title: "ft_printf", description: "Recoding the famous printf function in C.", tags: ["C", "Variadic Functions"], link: "https://github.com/ygoksu/ft_printf" }
-                ].map(proj => (
-                  <div key={proj.title} className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-3">{proj.title}</h3>
-                      <p className="text-slate-500 text-sm leading-relaxed">{proj.description}</p>
-                      <div className="flex flex-wrap gap-2 mt-4">
-                        {proj.tags.map(t => (
-                          <span key={t} className="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-medium">
-                            {t}
-                          </span>
-                        ))}
+                    {/* Özelleştirilmiş 42 Projeleri — Link eklenecek yerler */}
+                    {[
+                      { title: "42_solong", description: "A small 2D game using MiniLibX.", tags: ["C", "MiniLibX", "Algorithms"], link: "https://github.com/ygoksu/42_solong" },
+                      { title: "push_swap", description: "Data sorting project using two stacks with an optimized algorithm.", tags: ["C", "Sorting", "Algorithm"], link: "https://github.com/ygoksu/push_swap" },
+                      { title: "ft_printf", description: "Recoding the famous printf function in C.", tags: ["C", "Variadic Functions"], link: "https://github.com/ygoksu/ft_printf" }
+                    ].map(proj => (
+                      <div key={proj.title} className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                        <div>
+                          <h3 className="text-xl font-bold text-slate-900 mb-3">{proj.title}</h3>
+                          <p className="text-slate-500 text-sm leading-relaxed">{proj.description}</p>
+                          <div className="flex flex-wrap gap-2 mt-4">
+                            {proj.tags.map(t => (
+                              <span key={t} className="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-medium">
+                                {t}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                        {/* GITHUB LINK */}
+                        <a
+                          href={proj.link}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="mt-6 inline-block text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors"
+                        >
+                          View Source on GitHub ↗
+                        </a>
                       </div>
-                    </div>
-                    {/* GITHUB LINK */}
-                    <a
-                      href={proj.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-6 inline-block text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors"
-                    >
-                      View Source on GitHub ↗
-                    </a>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
-          </section>
+                </div>
+              </section>
 
 
-        </Scroll>
-      </ScrollControls>
-    </Suspense>
+            </Scroll>
+          </ScrollControls>
+        </Suspense>
       </Canvas >
     </div >
   )
