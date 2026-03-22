@@ -2,7 +2,7 @@
 
 export function ResumeSection() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-start p-10 md:p-32 w-full">
+    <section className="min-h-screen flex flex-col items-center justify-start pt-24 p-6 md:p-32 w-full">
       <div className="w-full max-w-5xl pointer-events-auto">
         <p className="text-xs font-semibold tracking-[0.3em] uppercase text-indigo-500 mb-3">
           About & Experience
@@ -15,7 +15,7 @@ export function ResumeSection() {
           {/* Sol Kolon: Summary & Eğitim */}
           <div className="lg:col-span-1 space-y-10">
             {/* Summary */}
-            <div className="bg-white/60 backdrop-blur-xsm p-8 rounded-2xl border border-white/80 shadow-sm">
+            <div className="bg-white/60 backdrop-blur-xsm p-6 md:p-8 rounded-2xl border border-white/80 shadow-sm">
               <h3 className="text-xl font-bold text-slate-900 mb-4">Summary</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
                 Computer Engineering graduate (Ranked 2nd in Dept, 3rd in Faculty) with a strong foundation in Data Mining & ML projects.
@@ -25,7 +25,7 @@ export function ResumeSection() {
             </div>
 
             {/* Education */}
-            <div className="bg-white/60 backdrop-blur-xsm p-8 rounded-2xl border border-white/80 shadow-sm">
+            <div className="bg-white/60 backdrop-blur-xsm p-6 md:p-8 rounded-2xl border border-white/80 shadow-sm">
               <h3 className="text-xl font-bold text-slate-900 mb-4">Education</h3>
               <div className="mb-6">
                 <p className="font-semibold text-slate-900">B.Sc. Computer Engineering</p>
@@ -44,7 +44,7 @@ export function ResumeSection() {
             </div>
 
             {/* Certificates */}
-            <div className="bg-white/60 backdrop-blur-xsm p-8 rounded-2xl border border-white/80 shadow-sm">
+            <div className="bg-white/60 backdrop-blur-xsm p-6 md:p-8 rounded-2xl border border-white/80 shadow-sm">
               <h3 className="text-xl font-bold text-slate-900 mb-4">Certificates</h3>
               <ul className="space-y-3 text-sm text-slate-600">
                 <li>
@@ -64,7 +64,7 @@ export function ResumeSection() {
             <h3 className="text-2xl font-bold text-slate-900 mb-6">Experience</h3>
 
             {/* Gunvor */}
-            <div className="bg-white/60 backdrop-blur-xsm p-8 rounded-3xl border border-white/80 shadow-sm hover:shadow-md transition-all">
+            <div className="bg-white/60 backdrop-blur-xsm p-6 md:p-8 rounded-3xl border border-white/80 shadow-sm hover:shadow-md transition-all">
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                 <div>
                   <h4 className="text-lg font-bold text-slate-900">Data Engineer Trainee</h4>
@@ -84,7 +84,7 @@ export function ResumeSection() {
             </div>
 
             {/* Tubitak */}
-            <div className="bg-white/60 backdrop-blur-xsm p-8 rounded-3xl border border-white/80 shadow-sm hover:shadow-md transition-all">
+            <div className="bg-white/60 backdrop-blur-xsm p-6 md:p-8 rounded-3xl border border-white/80 shadow-sm hover:shadow-md transition-all">
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                 <div>
                   <h4 className="text-lg font-bold text-slate-900">Researcher Assistant</h4>

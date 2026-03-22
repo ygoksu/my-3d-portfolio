@@ -11,6 +11,13 @@ import { type Project } from './types'
 function App() {
   const [dpr, setDpr] = useState(1.5)
   const [projects, setProjects] = useState<Project[]>([])
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   useEffect(() => {
     axios.get(`${import.meta.env.VITE_API_URL}/api/v1/projects`)
@@ -44,7 +51,7 @@ function App() {
         <pointLight position={[-5, 5, 3]} intensity={0.3} color="#bfdbfe" />
 
         <Suspense fallback={<Html center><span className="text-lg text-slate-500 animate-pulse">Yükleniyor...</span></Html>}>
-          <ScrollControls pages={3} damping={0.2}>
+          <ScrollControls pages={isMobile ? 5.5 : 3.5} damping={0.2}>
 
             {/* 3D Katmanı */}
             <Scroll>
@@ -129,7 +136,7 @@ function App() {
               <ResumeSection />
 
               {/* Projeler */}
-              <section className="min-h-screen flex flex-col items-center justify-start p-10 md:p-32">
+              <section className="min-h-screen flex flex-col items-center justify-start pt-24 p-6 md:p-32">
                 <div className="w-full max-w-5xl pointer-events-auto">
                   <p className="text-xs font-semibold tracking-[0.3em] uppercase text-indigo-500 mb-3">
                     Work
@@ -141,7 +148,7 @@ function App() {
                     {projects.length > 0 ? projects.map((p) => (
                       <div
                         key={p.id}
-                        className="bg-white/60 backdrop-blur-xsm p-8 rounded-2xl border border-white/50 shadow-sm hover:shadow-md hover:border-white/80 transition-all"
+                        className="bg-white/60 backdrop-blur-xsm p-6 md:p-8 rounded-2xl border border-white/50 shadow-sm hover:shadow-md hover:border-white/80 transition-all"
                       >
                         <h3 className="text-xl font-bold text-slate-900 mb-3">{p.title}</h3>
                         <p className="text-slate-500 text-sm leading-relaxed">{p.description}</p>
@@ -165,7 +172,7 @@ function App() {
                       { title: "push_swap", description: "Data sorting project using two stacks with an optimized algorithm.", tags: ["C", "Sorting", "Algorithm"], link: "https://github.com/ygoksu/push_swap" },
                       { title: "ft_printf", description: "Recoding the famous printf function in C.", tags: ["C", "Variadic Functions"], link: "https://github.com/ygoksu/ft_printf" }
                     ].map(proj => (
-                      <div key={proj.title} className="bg-white/60 backdrop-blur-xsm p-8 rounded-2xl border border-white/50 shadow-sm hover:shadow-md hover:border-white/80 transition-all flex flex-col justify-between">
+                      <div key={proj.title} className="bg-white/60 backdrop-blur-xsm p-6 md:p-8 rounded-2xl border border-white/50 shadow-sm hover:shadow-md hover:border-white/80 transition-all flex flex-col justify-between">
                         <div>
                           <h3 className="text-xl font-bold text-slate-900 mb-3">{proj.title}</h3>
                           <p className="text-slate-500 text-sm leading-relaxed">{proj.description}</p>
