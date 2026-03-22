@@ -2,16 +2,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #3730a3;   /* indigo-800 */
-  --color-secondary: #6366f1; /* indigo-500 */
+  --color-primary: #3730a3;
+  /* indigo-800 */
+  --color-secondary: #6366f1;
+  /* indigo-500 */
 }
 
-:root, html, body, #root {
+:root,
+html,
+body,
+#root {
   width: 100% !important;
   height: 100% !important;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  background-color: #fffde1;
+  /* Slate-100 pastel/soğuk gri tonu */
   color: #0f172a;
   overflow: hidden;
 }

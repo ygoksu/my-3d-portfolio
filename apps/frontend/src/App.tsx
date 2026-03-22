@@ -19,7 +19,7 @@ function App() {
   }, [])
 
   return (
-    <div className="relative w-full h-screen bg-white overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden">
       <A11Y.A11yAnnouncer />
 
       <Canvas
